@@ -31,7 +31,7 @@ export const systems = [
     description: "Routing and monitoring of official documents.",
     category: "Records Management",
     icon: "FileStack",
-    url: "https://www.google.com/",
+    url: "https://sites.google.com/view/nir-intranet/home?authuser=0",
   },
   {
     name: "Procurement Management System",
@@ -42,8 +42,8 @@ export const systems = [
     url: "https://www.github.com/",
   },
   {
-    name: "Health Facility Licensing System",
-    acronym: "HFLS",
+    name: "One Negros Health Facility System",
+    acronym: "ONHFS",
     description: "Licensing and regulation of health facilities.",
     category: "Regulation",
     icon: "BadgeCheck",
