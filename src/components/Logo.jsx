@@ -16,7 +16,6 @@ export default function Logo({ size = 40 }) {
 
       <img
         src="/assets/Bagong_PilipinasTransparent.png"
-        alt="Bagong Pilipinas Logo"
         width={size}
         height={size}
         className="brand__mark"

@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container site-header__inner">
-        <Link to="/directory" className="brand" aria-label="DOH NIR CHD, go to home">
+        <Link to="/directory" className="brand" aria-label="DOH NIR CHD">
           <span className="brand__mark">
             <Logo size={38} />
           </span>
@@ -22,7 +22,6 @@ export default function Header() {
           </span>
         </Link>
 
-        <Navigation />
       </div>
     </header>
   );

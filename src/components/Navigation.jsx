@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { to: "/directory", label: "Home" },
-  { to: "/about", label: "About Us" },
+  { to: "/directory", label: " " },
+  // { to: "/ictsys", label: "ICT Systems" },
 ];
 
 export default function Navigation() {

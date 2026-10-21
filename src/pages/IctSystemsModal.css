@@ -1,0 +1,493 @@
+/* ============================================================
+   ICT Systems Modal
+   ============================================================ */
+
+.ict-modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(31, 42, 69, 0.35);
+  backdrop-filter: blur(4px);
+}
+
+
+/* ============================================================
+   Modal
+   ============================================================ */
+
+.ict-modal {
+  width: min(1080px, 100%);
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: var(--color-bg);
+
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+
+  color: var(--color-navy);
+
+  text-align: left;
+}
+
+
+/* ============================================================
+   Header
+   ============================================================ */
+
+.ict-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  width: 100%;
+
+  padding: 20px 22px;
+
+  box-sizing: border-box;
+
+  background: var(--color-bg);
+
+  border-bottom: 1px solid rgba(31, 42, 69, 0.08);
+
+  text-align: left;
+}
+
+.ict-modal__eyebrow {
+  margin: 0 0 4px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+
+  color: var(--color-teal);
+
+  text-align: left;
+}
+
+.ict-modal__title {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  color: var(--color-navy);
+
+  text-align: left;
+}
+
+
+/* ============================================================
+   Close Button
+   ============================================================ */
+
+.ict-modal__close {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 1px solid rgba(31, 42, 69, 0.14);
+  border-radius: var(--radius-sm);
+
+  background: var(--color-bg);
+
+  color: var(--color-navy);
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.ict-modal__close:hover {
+  background-color: rgba(88, 124, 165, 0.1);
+
+  border-color: rgba(88, 124, 165, 0.3);
+
+  color: var(--color-blue-strong);
+}
+
+.ict-modal__close:focus-visible {
+  outline: 2px solid var(--color-blue-strong);
+  outline-offset: 2px;
+}
+
+
+/* ============================================================
+   Grid Layout — Centered, Scrollable
+   ============================================================ */
+
+.ict-modal__grid {
+  flex: 1 1 auto;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+
+  padding: 18px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* Hide scrollbar but preserve scrolling */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior-y: contain;
+
+  background: var(--color-bg);
+
+  text-align: left;
+}
+
+.ict-modal__grid::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ============================================================
+   Modal Card
+   ============================================================ */
+
+.ict-modal__card {
+  width: auto;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin: 0;
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  background-color: var(--color-bg);
+
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+
+  color: inherit;
+  text-decoration: none;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.ict-modal__card:hover {
+  transform: translateY(-2px);
+
+  background-color: rgba(88, 124, 165, 0.08);
+
+  border-color: rgba(88, 124, 165, 0.35);
+
+  box-shadow:
+    0 4px 14px rgba(31, 42, 69, 0.10),
+    0 2px 6px rgba(31, 42, 69, 0.05);
+}
+
+.ict-modal__card:focus-visible {
+  outline: 2px solid var(--color-blue-strong);
+  outline-offset: 2px;
+}
+
+
+/* ============================================================
+   Card Top
+   ============================================================ */
+
+.ict-modal__card-top {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  text-align: left;
+}
+
+
+/* ============================================================
+   Icon
+   ============================================================ */
+
+.ict-modal__icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: var(--radius-sm);
+
+  color: var(--color-white);
+
+  line-height: 0;
+}
+
+.ict-modal__icon svg {
+  display: block;
+}
+
+
+/* ============================================================
+   Category
+   ============================================================ */
+
+.ict-modal__category {
+  max-width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  padding: 4px 9px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+
+  line-height: 1.2;
+
+  text-align: right;
+
+  text-transform: uppercase;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--color-blue-soft);
+
+  /* border: 1px solid rgba(116, 117, 76, 0.3); */
+
+  border-radius: 999px;
+}
+
+
+/* ============================================================
+   Card Body
+   ============================================================ */
+
+.ict-modal__card-body {
+  flex: 1;
+
+  width: 100%;
+  min-width: 0;
+
+  text-align: left;
+}
+
+.ict-modal__acronym {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+
+  line-height: 1.2;
+
+  color: var(--color-blue-strong);
+
+  text-align: left;
+}
+
+.ict-modal__card-body h3 {
+  margin: 0 0 6px;
+
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: var(--color-navy);
+
+  text-align: left;
+
+  overflow-wrap: break-word;
+}
+
+.ict-modal__card-body p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  color: var(--color-ink);
+
+  text-align: left;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   Open Link
+   ============================================================ */
+
+.ict-modal__open {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding-top: 10px;
+
+  border-top: 1px solid rgba(31, 42, 69, 0.08);
+
+  font-size: 12.5px;
+  font-weight: 700;
+
+  color: var(--color-blue-strong);
+
+  text-align: left;
+
+  text-decoration: none;
+}
+
+.ict-modal__open svg {
+  transition: transform 0.15s ease;
+}
+
+.ict-modal__card:hover .ict-modal__open svg {
+  transform: translateX(3px);
+}
+
+
+/* ============================================================
+   Responsive Tablet & Mobile Adjustments
+   ============================================================ */
+
+/* Tablet */
+@media (max-width: 980px) {
+  .ict-modal__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .ict-modal__card {
+    padding: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  .ict-modal__overlay {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .ict-modal {
+    max-height: 94vh;
+  }
+
+  .ict-modal__header {
+    padding: 16px 18px;
+  }
+
+  .ict-modal__title {
+    font-size: 15px;
+  }
+
+  .ict-modal__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .ict-modal__card {
+    padding: 15px;
+  }
+
+  .ict-modal__icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ict-modal__category {
+    padding: 4px 8px;
+    font-size: 9px;
+  }
+
+  .ict-modal__eyebrow {
+    font-size: 10px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+  .ict-modal__overlay {
+    padding: 8px;
+  }
+
+  .ict-modal__header {
+    padding: 14px;
+  }
+
+  .ict-modal__grid {
+    padding: 10px;
+  }
+
+  .ict-modal__card {
+    padding: 14px;
+  }
+
+  .ict-modal__card-body h3 {
+    font-size: 16px;
+  }
+}
